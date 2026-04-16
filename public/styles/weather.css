@@ -1,0 +1,100 @@
+body {
+    background: #0f0f1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 420px;
+    padding: 1rem;
+  }
+  
+  .card {
+    background: #1a1a2e;
+    border: 0.5px solid #2e2e4a;
+    border-radius: 20px;
+    padding: 2rem;
+    color: #e0e0f0;
+  }
+  
+  h1 { 
+    font-size: 28px; 
+    font-weight: 500; 
+    color: #fff; 
+    margin: 0 0 4px; 
+}
+  h1 span { 
+    font-size: 20px; 
+    color: #8888aa; 
+}
+
+  h2 { 
+    font-size: 14px; 
+    color: #8888aa; 
+    margin: 0 0 1.5rem; 
+    font-weight: 400; 
+}
+
+
+.main-weather { font-size: 18px; 
+    font-weight: 500; 
+    color: #c084fc; 
+    margin: 0 0 4px; 
+}
+
+.description { 
+    font-size: 14px; 
+    color: #8888aa; 
+    margin: 0 0 1.5rem; 
+    text-transform: capitalize; 
+}
+
+.temp-big { 
+    font-size: 56px; 
+    font-weight: 500; 
+    color: #fff; 
+    margin: 0 0 1.5rem; 
+    letter-spacing: -2px; 
+}
+
+.temp-big span { 
+    font-size: 24px; 
+    color: #8888aa; 
+}
+
+.divider { 
+    border: none; 
+    border-top: 0.5px solid #2e2e4a; 
+    margin: 1.5rem 0; 
+}
+
+.stats-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 12px; 
+}
+
+.stat { 
+    background: #12122a; 
+    border-radius: 12px; 
+    padding: 12px; 
+}
+
+.stat-label { 
+    font-size: 11px; 
+    color: #6666aa; 
+    margin: 0 0 4px; 
+    text-transform: uppercase; 
+}
+
+.stat-value { 
+    font-size: 16px; 
+    font-weight: 500; 
+    color: #e0e0f0; 
+    margin: 0; 
+}

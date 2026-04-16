@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/weather.css">
     <title>Weather API</title>
 </head>
 <body>
     <div class="container">
-        <h2><%=city  %>, <span><%=country  %></span></h2>
-
         <div class="card">
-            <div class="card-items">
-                <%=mainweather  %>
-            </div>
-            <div class="card-items">
-                <%=description  %>
-            </div>
-            <div class="card-items">
-                <%=icon  %>
+            <h1><%=city %>, <span><%=country %></span></h1>
+            <h2>Current Weather</h2>
+
+            <p class="main-weather"><%=mainweather %></p>
+            <p class="description"><%=description %></p>
+            <p class="temp-big"><%=temp %><span>°C</span></p>
+
+
+            <hr class="divider">
+
+            <div class="stats-grid">
+                <div class="stat">
+                    <p class="stat-label">Humidity</p>
+                    <p class="stat-value"><%=humid %>%</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-label">Pressure</p>
+                    <p class="stat-value"><%=pressure %> hPa</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-label">Wind</p>
+                    <p class="stat-value"><%=windS %> m/s</p>
+                </div>
             </div>
         </div>
     </div>
