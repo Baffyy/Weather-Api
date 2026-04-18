@@ -24,9 +24,9 @@ app.post("/submit", async(req, res) => {
     const location = req.body.name;
 
     try{
-       const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=process.env.API_KEY`);
+       const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.API_KEY}`);
        const result = response.data[0];
-       const weather= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${result.lat}&lon=${result.lon}&appid=process.env.API_KEY&units=metric`)
+       const weather= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${result.lat}&lon=${result.lon}&appid=${process.env.API_KEY}&units=metric`)
        const weatherResult= weather.data;
        console.log(weatherResult)
        res.render("weather.ejs", {city: result.name, 
