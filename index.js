@@ -1,9 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import dotenv from "dotenv"
 
 const app = express();
 const port= 3000;
+
+dotenv.config();
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -21,9 +24,9 @@ app.post("/submit", async(req, res) => {
     const location = req.body.name;
 
     try{
-       const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=2cab5511669b7edcf3b1621c629701d1`);
+       const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=process.env.API_KEY`);
        const result = response.data[0];
-       const weather= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${result.lat}&lon=${result.lon}&appid=2cab5511669b7edcf3b1621c629701d1&units=metric`)
+       const weather= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${result.lat}&lon=${result.lon}&appid=process.env.API_KEY&units=metric`)
        const weatherResult= weather.data;
        console.log(weatherResult)
        res.render("weather.ejs", {city: result.name, 
