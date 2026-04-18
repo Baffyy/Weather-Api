@@ -37,17 +37,16 @@ REST API
 Git & GitHub
 Render (Deployment)
 dotenv
+
 ⚙️ Features
 Search for any city’s weather
 Dynamic rendering of API data
 Clean server-side routing
 Error handling for invalid input
 Simple and functional UI
+
+
 📸 Screenshots
-
-(Add screenshots here — do not skip this)
-
-Example:
 
 ![Homepage](./public/homepage.png)
 ![Weather Result](./public/weatherpage.png)
